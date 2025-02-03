@@ -18,7 +18,7 @@ class Player(pygame.sprite.Sprite):
         self.player_walk = [player_walk_1, player_walk_2, player_walk_3, player_walk_4, player_walk_5, player_walk_6, player_walk_7,  player_walk_8]
         self.player_index = 0
 
-        self.player_jump = pygame.image.load('Imagens/player/player_jump_4.png').convert_alpha()
+        self.player_jump = pygame.image.load('Imagens/Player/player_jump_4.png').convert_alpha()
 
         self.image = self.player_walk[self.player_index]
         self.mask = pygame.mask.from_surface(self.image)
@@ -26,7 +26,7 @@ class Player(pygame.sprite.Sprite):
         self.rect = self.image.get_rect(midbottom=(80, 300))
         self.gravity = 0
 
-        self.jump_sound = pygame.mixer.Sound('audio/jump.mp3')
+        self.jump_sound = pygame.mixer.Sound('Audio/jump.mp3')
         self.jump_sound.set_volume(0.1)
 
     def player_input(self):
@@ -57,7 +57,7 @@ class Player(pygame.sprite.Sprite):
 
 
 class Obstacle(pygame.sprite.Sprite):
-    def _init_(self, type):
+    def __init__(self, type):
         super().__init__()
 
         if type == 'Vulture':
@@ -147,11 +147,11 @@ scroll_ground = 0
 tiles_ground = math.ceil(800/ground_width) + 1
 
 # Intro screen
-player_idle_1 = pygame.image.load('Imagens/player/player_idle_1.png').convert_alpha()
-player_idle_2 = pygame.image.load('Imagens/player/player_idle_2.png').convert_alpha()
-player_idle_3 = pygame.image.load('Imagens/player/player_idle_3.png').convert_alpha()
-player_idle_4 = pygame.image.load('Imagens/player/player_idle_4.png').convert_alpha()
-player_idle_5 = pygame.image.load('Imagens/player/player_idle_5.png').convert_alpha()
+player_idle_1 = pygame.image.load('Imagens/Player/player_idle_1.png').convert_alpha()
+player_idle_2 = pygame.image.load('Imagens/Player/player_idle_2.png').convert_alpha()
+player_idle_3 = pygame.image.load('Imagens/Player/player_idle_3.png').convert_alpha()
+player_idle_4 = pygame.image.load('Imagens/Player/player_idle_4.png').convert_alpha()
+player_idle_5 = pygame.image.load('Imagens/Player/player_idle_5.png').convert_alpha()
 
 player_index = 0
 
